@@ -1,0 +1,14 @@
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\bin\Debug\net6.0\myApp.exe
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\bin\Debug\net6.0\myApp.deps.json
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\bin\Debug\net6.0\myApp.runtimeconfig.json
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\bin\Debug\net6.0\myApp.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\bin\Debug\net6.0\myApp.pdb
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.AssemblyInfoInputs.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.AssemblyInfo.cs
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.csproj.CoreCompileInputs.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\refint\myApp.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.pdb
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\myApp.genruntimeconfig.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\Design pattern C#\DesignPatternsAbstractFactory\myApp\obj\Debug\net6.0\ref\myApp.dll
