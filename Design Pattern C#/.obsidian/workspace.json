@@ -19,11 +19,14 @@
             "id": "8182b9cb76aab87c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Sans titre.md",
-                "mode": "source",
-                "source": false
+                "file": "Diagramme Builder.canvas",
+                "viewState": {
+                  "x": 15,
+                  "y": -100,
+                  "zoom": 0
+                }
               }
             }
           }
@@ -94,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sans titre.md",
+                "file": "Diagramme Builder.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sans titre.md",
+                "file": "Diagramme Builder.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sans titre.md"
+                "file": "Diagramme Builder.canvas"
               }
             }
           }
@@ -155,8 +158,9 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "8182b9cb76aab87c",
+  "active": "7e79a0b961a0ce64",
   "lastOpenFiles": [
-    "Sans titre.md"
+    "Sans titre.md",
+    "Diagramme Builder.canvas"
   ]
 }

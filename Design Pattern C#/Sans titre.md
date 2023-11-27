@@ -78,7 +78,7 @@ Cet exemple témoigne de la complexité du paramétrage du mécanisme de créati
 ## Abstract Factory
 
 ### Définition
-Fournit une interface pour al création de familles d'objets liés ou dépendants sans préciser leur classe concrète.
+Fournit une interface pour la création de familles d'objets liés ou dépendants sans préciser leur classe concrète.
 
 ### Contexte
 Le système de vente de véhicules gère des véhicules qui fonctionnent soit de manière électrique soit avec de l'essence. La gestion de ce mécanisme sera géré par l'objet `Catalogue`. L'objet `catalogue` se charge alors de créer de tels objets (véhicules).
@@ -91,3 +91,11 @@ Le pattern **Abstract Factory** résout cette problématique en introduisant une
 n'a alors pas besoin de connaitre les classes concrètes des produits.
 
 L'objet prend alors pour paramètre une instance répondant à l'interface, cest-à-dire soit une instance de `fabriqueVehiculeElectric`, soit une instance de `FabriqueVehiculeEssence`. 
+
+## Builder
+
+### Définition
+Le but est de séparer la construction d'objet complexes de leur implémentation de sorte qu'un client puisse créer ces objets sans avoir a se soucier de leur implémentation.
+
+### Contexte
+Voir cours du prof.
