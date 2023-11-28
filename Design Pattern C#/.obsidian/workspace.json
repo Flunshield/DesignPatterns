@@ -21,11 +21,11 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "fabrique(unknowPattern)ULM.canvas",
+                "file": "Sans titre.canvas",
                 "viewState": {
                   "x": 0,
-                  "y": 147.62829783304255,
-                  "zoom": -0.6666666666666666
+                  "y": 22.5,
+                  "zoom": 0
                 }
               }
             }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "fabrique(unknowPattern)ULM.canvas",
+                "file": "Sans titre.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "fabrique(unknowPattern)ULM.canvas",
+                "file": "Sans titre.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "fabrique(unknowPattern)ULM.canvas"
+                "file": "Sans titre.canvas"
               }
             }
           }
@@ -160,9 +160,17 @@
   },
   "active": "8182b9cb76aab87c",
   "lastOpenFiles": [
+    "Prise de note.md",
+    "Sans titre.canvas",
+    "Pasted image 20231128142814.png",
+    "Bridge UML.canvas",
+    "Diagramme Prototype.canvas",
     "Diagramme Builder.canvas",
+    "Diagramme Adapteur.canvas",
+    "Diagramme Singleton.canvas",
     "fabrique(unknowPattern)ULM.canvas",
-    "Sans titre",
-    "Sans titre.md"
+    "Pasted image 20231128121453.png",
+    "Pasted image 20231128114717.png",
+    "Sans titre"
   ]
 }

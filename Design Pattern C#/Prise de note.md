@@ -99,3 +99,75 @@ Le but est de séparer la construction d'objet complexes de leur implémentation
 
 ### Contexte
 Voir cours du prof.
+
+## Prototype
+### Définition
+Le but de ce pattern est de permettre la création d'objet en dupliquant des objets existants appelés prototypes qui sont des objets préconstruits.
+
+
+## Contexte
+Voir cours du prof
+
+```C#
+using System.Collections;
+public abstract class LiasseVierge
+{
+	public IList<Document> {get; protected set;}
+
+	
+}
+```
+
+### Singleton
+### Définition
+**Singleton** est un patron de conception de création qui garantit que l’instance d’une classe n’existe qu’en un seul exemplaire, tout en fournissant un point d’accès global à cette instance.
+
+```C#
+public classe LiasseVierge : Liasse
+{
+	private static LiasseVierge _instance = null;
+	private LiasseVierge()
+	{
+		document = new Liste<Document>;
+	}
+
+	public static LiawsseVierge instance() {
+	if(_instance == null) {
+		_instance = new LiasseVierge();
+	}
+	
+		return _instance;
+	}
+
+}
+```
+
+## Les patterns de structure
+L'objectif des patterns de structure est de fournir des mécanismes de compositions de classes et d'objet pour former des structures plus complexes. On cherche à faciliter l'indépendance de l'interface d'un objet et de son implémentation.
+
+Les patterns de structurations vont venir encapsuler la composition des objets. On va ainsi augmenter le niveau d'abstraction du système, tout comme les patterns de création qui encapsulent la création d'instance d'objets.
+Les patterns de structurations vont mettre en avant els interfaces.
+
+
+### Adapter
+**Adapter** : Permet d'adapter une interface existante a une autre interface attendue par le client.
+
+#### Définition
+L’**Adaptateur** est un patron de conception structurel qui permet de faire collaborer des objets ayant des interfaces normalement incompatibles.
+
+![[Pasted image 20231128114717.png]]
+
+### Bridge
+![[Pasted image 20231128121453.png]]
+### Définition
+Le **Pont** est un patron de conception structurel qui permet de séparer une grosse classe ou un ensemble de classes connexes en deux hiérarchies — abstraction et implémentation — qui peuvent évoluer indépendamment l’une de l’autre.
+
+Sépare l'implémentation de la représentation.
+
+### Composite
+
+#### Définition
+
+**Composite** est un patron de conception structurel qui permet d’agencer les objets dans des arborescences afin de pouvoir traiter celles-ci comme des objets individuels.
+
+![[Pasted image 20231128142814.png]]

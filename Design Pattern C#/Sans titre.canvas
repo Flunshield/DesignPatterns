@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"bc0bd6126e2f4ab2","x":-220,"y":-240,"width":250,"height":60,"type":"text","text":"société Mere\n+demande()"},
+		{"id":"0119f6446d6bb9c5","x":-470,"y":-20,"width":250,"height":60,"type":"text","text":"Sans filliale\n+demande()"},
+		{"id":"71eee8a6d93fc9e7","x":0,"y":-20,"width":250,"height":60,"type":"text","text":"société Mere\n+demande()"},
+		{"id":"3195b9d08c43c043","type":"text","text":"Sans filliale\n+demande()","x":-220,"y":210,"width":250,"height":60},
+		{"id":"e9d82f31a0106147","type":"text","text":"société Mere\n+demande()","x":260,"y":210,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"265dc0a6598ba36f","fromNode":"0119f6446d6bb9c5","fromSide":"top","toNode":"bc0bd6126e2f4ab2","toSide":"bottom"},
+		{"id":"ab76839cb11078fc","fromNode":"71eee8a6d93fc9e7","fromSide":"top","toNode":"bc0bd6126e2f4ab2","toSide":"bottom"},
+		{"id":"9e2f0031d509334a","fromNode":"3195b9d08c43c043","fromSide":"top","toNode":"71eee8a6d93fc9e7","toSide":"bottom"},
+		{"id":"1989e07aa128844a","fromNode":"e9d82f31a0106147","fromSide":"top","toNode":"71eee8a6d93fc9e7","toSide":"bottom"}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"id":"886ebd79b8902d6e","type":"text","text":"**Utilisateur**\nFormImmatriculationLuxembourg()\nFormImmatriculationFrance()\ngereSaisie()\ngenereDocument()\naffiche()","x":-215,"y":-540,"width":320,"height":220},
+		{"id":"a552a1aad85dc878","type":"text","text":"FormulaireImmatriculation\naffiche()\ngenereDocument()\ngereSaisie()","x":-206,"y":-240,"width":303,"height":150},
+		{"id":"6a3617fc7cfed5a1","type":"text","text":"FormImmatriculationFrance\ncontroleSaisie()","x":-420,"y":90,"width":265,"height":90},
+		{"id":"ab8a2be51cd34c44","type":"text","text":"FormImmatriculationLuxembourg\ncontroleSaisie()","x":0,"y":90,"width":302,"height":90},
+		{"id":"da212b01a24cdeeb","type":"text","text":"**FormulaireImpl**\ndessineTexte()\ngereZoneSaisie()","x":520,"y":90,"width":250,"height":110},
+		{"id":"5b55828b8048b0ee","type":"text","text":"FormHtmlImpl\ndessineTexte()\ngereZoneSaisie()","x":360,"y":333,"width":250,"height":118},
+		{"id":"675177ad1b7ae14b","type":"text","text":"FormAppletImpl\ndessineTexte()\ngereZoneSaisie()","x":700,"y":333,"width":260,"height":118},
+		{"id":"b78f3ce2145a8cfb","type":"text","text":"Client","x":900,"y":-600,"width":250,"height":60},
+		{"id":"b8891ba67bbd84c3","type":"text","text":"Classe abstraite\n+opération1()\n+opération2()","x":900,"y":-430,"width":250,"height":60},
+		{"id":"d98c57ae06aff38c","type":"text","text":"Classe concrete A\n+opération2()","x":770,"y":-275,"width":250,"height":60},
+		{"id":"bffef538e597cc0c","type":"text","text":"Classe concrete B","x":1075,"y":-275,"width":250,"height":60},
+		{"id":"6fb28140eca7e100","type":"text","text":"Implementation B","x":1660,"y":-90,"width":250,"height":60},
+		{"id":"a4219603e864e29c","type":"text","text":"Implementation","x":1450,"y":-270,"width":250,"height":60},
+		{"id":"6c874917aa9e4e36","type":"text","text":"Implementation A","x":1280,"y":-90,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"37224fde5070c86d","fromNode":"5b55828b8048b0ee","fromSide":"top","toNode":"da212b01a24cdeeb","toSide":"bottom"},
+		{"id":"dd6d6c3e43f907f7","fromNode":"675177ad1b7ae14b","fromSide":"top","toNode":"da212b01a24cdeeb","toSide":"bottom"},
+		{"id":"68ca041abe153acd","fromNode":"886ebd79b8902d6e","fromSide":"bottom","toNode":"a552a1aad85dc878","toSide":"top"},
+		{"id":"2e62cf2bb86e2887","fromNode":"6a3617fc7cfed5a1","fromSide":"top","toNode":"a552a1aad85dc878","toSide":"bottom"},
+		{"id":"f0882ee0ed41c3f2","fromNode":"ab8a2be51cd34c44","fromSide":"top","toNode":"a552a1aad85dc878","toSide":"bottom"},
+		{"id":"1ffc9fb1c6f8a303","fromNode":"a552a1aad85dc878","fromSide":"right","toNode":"da212b01a24cdeeb","toSide":"top"},
+		{"id":"d4933d1f9b6f955d","fromNode":"b78f3ce2145a8cfb","fromSide":"bottom","toNode":"b8891ba67bbd84c3","toSide":"top"},
+		{"id":"f3bcbf66ea531ee2","fromNode":"d98c57ae06aff38c","fromSide":"top","toNode":"b8891ba67bbd84c3","toSide":"bottom"},
+		{"id":"3098139de8196697","fromNode":"bffef538e597cc0c","fromSide":"top","toNode":"b8891ba67bbd84c3","toSide":"bottom"},
+		{"id":"2a1fa0250c33e404","fromNode":"b8891ba67bbd84c3","fromSide":"right","toNode":"a4219603e864e29c","toSide":"top","toEnd":"none"},
+		{"id":"573db9cc7df6b58c","fromNode":"6c874917aa9e4e36","fromSide":"top","toNode":"a4219603e864e29c","toSide":"bottom"},
+		{"id":"7b557258f8307af6","fromNode":"6fb28140eca7e100","fromSide":"top","toNode":"a4219603e864e29c","toSide":"bottom"}
+	]
+}

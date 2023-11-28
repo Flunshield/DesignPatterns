@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"f28e30243954b47a","x":-125,"y":-160,"width":345,"height":260,"type":"text","text":"Liasse Vierge\n- instance: LiasseVierge = null\n----------------------- \n- LiasseVierge()\n+CréerLiasseVierge()\n+SupprimerLiasseVierge()"}
+	],
+	"edges":[]
+}
