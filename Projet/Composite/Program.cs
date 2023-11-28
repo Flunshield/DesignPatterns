@@ -4,24 +4,24 @@ class Program
 {
     static void Main()
     {
-        societe societe1 = new societeSansFilial();
+        Societe societe1 = new societeSansFilial();
         societe1.ajouteVehicule();
         societe1.ajouteVehicule();
-        societe societe2 = new societeMaire();
+        Societe societe2 = new societeMere();
         societe2.ajouteVehicule();
+        societe2.ajouteFilial(societe1);
 
-        societe groupe = new societeMaire();
+        Societe groupe = new societeMere();
         groupe.ajouteFilial(societe2);
-        groupe.ajouteFilial(societe1);
 
-        double countcoutEntretient = groupe.countCoutEntretient();
+        double countcoutEntretient = groupe.countCoutEntretien();
         Console.WriteLine(countcoutEntretient);
     }
 }
 
 
 // Class abstraite
-public abstract class societe {
+public abstract class Societe {
     protected static double countVehicule = 5.0;
     protected int nbrVehicvules = 0;
 
@@ -30,39 +30,39 @@ public abstract class societe {
         nbrVehicvules += 1;
     }
 
-    public abstract double countCoutEntretient();
-    public abstract bool ajouteFilial(societe filiale);
+    public abstract double countCoutEntretien();
+    public abstract bool ajouteFilial(Societe filiale);
 }
 
 // class concrete
-public class societeSansFilial: societe
+public class societeSansFilial: Societe
 {
-    public override bool ajouteFilial(societe filiale)
+    public override bool ajouteFilial(Societe filiale)
     {
         return false;
     }
-    public override double countCoutEntretient()
+    public override double countCoutEntretien()
     {
         return countVehicule * nbrVehicvules;
     }
 }
 
 // class concrete
-public class societeMaire: societe
+public class societeMere: Societe
 {
-    protected List<societe> filiales = new List<societe>();
+    protected List<Societe> filiales = new List<Societe>();
 
-    public override bool ajouteFilial(societe filiale)
+    public override bool ajouteFilial(Societe filiale)
     {
         filiales.Add(filiale);
         return true;
     }
-    public override double countCoutEntretient()
+    public override double countCoutEntretien()
     {
         double cout = 0.0;
-        foreach (societe filiale in filiales)
+        foreach (Societe filiale in filiales)
         {
-            cout = cout + filiale.countCoutEntretient();
+            cout = cout + filiale.countCoutEntretien();
         }
         return cout + countVehicule * nbrVehicvules;
     }
