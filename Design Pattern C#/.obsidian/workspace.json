@@ -19,14 +19,11 @@
             "id": "8182b9cb76aab87c",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Sans titre.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 115.5,
-                  "zoom": 0
-                }
+                "file": "Prise de note.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -97,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sans titre.canvas",
+                "file": "Prise de note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sans titre.canvas",
+                "file": "Prise de note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sans titre.canvas"
+                "file": "Prise de note.md"
               }
             }
           }
@@ -160,8 +157,8 @@
   },
   "active": "8182b9cb76aab87c",
   "lastOpenFiles": [
-    "Prise de note.md",
     "Sans titre.canvas",
+    "Prise de note.md",
     "Pasted image 20231128142814.png",
     "Bridge UML.canvas",
     "Diagramme Prototype.canvas",
