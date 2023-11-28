@@ -1,0 +1,15 @@
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\bin\Debug\net6.0\Composite.exe
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\bin\Debug\net6.0\Composite.deps.json
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\bin\Debug\net6.0\Composite.runtimeconfig.json
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\bin\Debug\net6.0\Composite.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\bin\Debug\net6.0\Composite.pdb
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.AssemblyInfoInputs.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.AssemblyInfo.cs
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.csproj.CoreCompileInputs.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.sourcelink.json
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\refint\Composite.dll
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.pdb
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\Composite.genruntimeconfig.cache
+C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\obj\Debug\net6.0\ref\Composite.dll

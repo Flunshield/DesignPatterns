@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("AbstractFactory")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Composite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("AbstractFactory")]
-[assembly: System.Reflection.AssemblyTitleAttribute("AbstractFactory")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e448f891aa07a962d625cb597213a3d7cce665")]
+[assembly: System.Reflection.AssemblyProductAttribute("Composite")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Composite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
