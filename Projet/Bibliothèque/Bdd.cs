@@ -184,7 +184,6 @@ namespace Bibliothèque
             {
                 string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, emprunteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '0', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
                 ExecuteNonQuery(insertQuery);
-
                 Console.WriteLine($"Le livre '{titre}' a bien été créé");
             }
             catch (Exception ex)

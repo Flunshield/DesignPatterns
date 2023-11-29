@@ -32,15 +32,16 @@ class Program
             {
 
                 case "1":
-                    FabriqueLivre.CreationLivre();
+                    FabriqueLivre.Livre livreInstance = new FabriqueLivre.Livre();
+                    livreInstance.Creation();
                     break;
 
                 case "2":
-                    FabriqueLivre.CreationCategorie();
+                    //FabriqueLivre.CreationCategorie();
                     break;
 
                 case "3":
-                    FabriqueLivre.CreationAuteur();
+                    //FabriqueLivre.CreationAuteur();
                     break;
 
                 case "4":
