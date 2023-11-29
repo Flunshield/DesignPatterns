@@ -20,7 +20,7 @@ namespace Bibliothèque
             ExecuteNonQuery("USE tp;");
 
             // Création de la table Autheur
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Autheur (id INT AUTO_INCREMENT PRIMARY KEY, nomAutheur VARCHAR(255), prenomAutheur VARCHAR(255));");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAutheur VARCHAR(255), prenomAutheur VARCHAR(255));");
 
             // Création de la table Category
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Category (id INT AUTO_INCREMENT PRIMARY KEY, nomCategory VARCHAR(255));");
@@ -40,8 +40,14 @@ namespace Bibliothèque
 
         public static List<Book> GetAllBooks()
         {
-            List<Book>  books = ExecuteQuery("SELECT * FROM tp.livre;");
+            List<Book>  books = ExecuteQueryLivre("SELECT * FROM tp.livre;");
             return books;
+        }
+
+        public static List<Auteur> GetAllAuteurs()
+        {
+            List<Auteur> auteurs = ExecuteQueryAuteur("SELECT * FROM tp.auteur;");
+            return auteurs;
         }
 
         private static void ExecuteNonQuery(string query)
@@ -62,7 +68,7 @@ namespace Bibliothèque
             }
         }
 
-        public static List<Book> ExecuteQuery(string query)
+        public static List<Book> ExecuteQueryLivre(string query)
         {
             List<Book> results = new List<Book>();
 
@@ -92,6 +98,39 @@ namespace Bibliothèque
                         };
 
                         results.Add(book);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return results;
+        }
+
+        public static List<Auteur> ExecuteQueryAuteur(string query)
+        {
+            List<Auteur> results = new List<Auteur>();
+
+            MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
+
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                connection.Close();
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Auteur auteur = new Auteur
+                        {
+                            Id = reader.GetInt32("id"),
+                            nomAutheur = reader.GetString("nomAutheur"),
+                            prenomAutheur = reader.GetString("prenomAutheur")
+                        };
+
+                        results.Add(auteur);
                     }
                 }
 

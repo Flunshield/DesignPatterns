@@ -9,36 +9,37 @@ namespace Bibliothèque
 {
     internal class BookIteratorr
     {
-        public class BookIterator : IIterator<Book>
+        public class Iterator<T> : IIterator<T>
         {
-            private List<Book> books;
+            private List<T> items;
             private int currentIndex;
 
-            public BookIterator(List<Book> books)
+            public Iterator(List<T> items)
             {
-                this.books = books;
+                this.items = items;
                 this.currentIndex = 0;
             }
 
-            public Book Next()
+            public T Next()
             {
                 if (HasNext())
                 {
-                    Book nextBook = books[currentIndex];
+                    T nextItem = items[currentIndex];
                     currentIndex++;
-                    return nextBook;
+                    return nextItem;
                 }
                 else
                 {
-                    throw new InvalidOperationException("No more books in the iterator.");
+                    throw new InvalidOperationException("No more items in the iterator.");
                 }
             }
 
             public bool HasNext()
             {
-                return currentIndex < books.Count;
+                return currentIndex < items.Count;
             }
         }
+
 
     }
 }

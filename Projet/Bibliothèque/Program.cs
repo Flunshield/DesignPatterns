@@ -40,7 +40,7 @@ class Program
 
                 case "4":
                     List<Book> bookList = Bdd.GetAllBooks();
-                    IIterator <Book> bookIterator = new BookIterator(bookList);
+                    IIterator <Book> bookIterator = new Iterator<Book>(bookList);
 
                     Console.WriteLine("");
                     while (bookIterator.HasNext())
@@ -55,6 +55,17 @@ class Program
                     break;
 
                 case "6":
+                    List<Auteur> auteurList = Bdd.GetAllAuteurs();
+                    IIterator<Auteur> auteursIterator = new Iterator<Auteur>(auteurList);
+
+                    Console.WriteLine("");
+                    while (auteursIterator.HasNext())
+                    {
+                        Auteur nextAuteur = auteursIterator.Next();
+                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAutheur}, prenomAutheur: {nextAuteur.prenomAutheur}");
+                    }
+                    Console.WriteLine("");
+                    break;
                     break;
 
                 case "7":
