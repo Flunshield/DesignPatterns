@@ -20,7 +20,7 @@ namespace Bibliothèque
             ExecuteNonQuery("USE tp;");
 
             // Création de la table Autheur
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAuteur VARCHAR(255), prenomAuteur VARCHAR(255));");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAutheur VARCHAR(255), prenomAutheur VARCHAR(255));");
 
             // Création de la table Category
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Category (id INT AUTO_INCREMENT PRIMARY KEY, nomCategory VARCHAR(255));");
@@ -126,8 +126,8 @@ namespace Bibliothèque
                         Auteur auteur = new Auteur
                         {
                             Id = reader.GetInt32("id"),
-                            nomAuteur = reader.GetString("nomAuteur"),
-                            prenomAuteur = reader.GetString("prenomAuteur")
+                            nomAutheur = reader.GetString("nomAutheur"),
+                            prenomAutheur = reader.GetString("prenomAutheur")
                         };
 
                         results.Add(auteur);
@@ -177,7 +177,7 @@ namespace Bibliothèque
         {
             try
             {
-                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, emprunteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '0', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
+                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
                 ExecuteNonQuery(insertQuery);
 
                 Console.WriteLine($"Le livre '{titre}' a bien été créé");
@@ -196,6 +196,21 @@ namespace Bibliothèque
                 ExecuteNonQuery(insertQuery);
 
                 Console.WriteLine($"La catégorie '{name}' a bien été créé");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
+            }
+        }
+
+        public static void AddAuteurToBdd(string name, string prenom)
+        {
+            try
+            {
+                string insertQuery = $"INSERT INTO Auteur (nomAuteur, prenomAuteur) VALUES ('{name}', '{prenom}')";
+                ExecuteNonQuery(insertQuery);
+
+                Console.WriteLine($"'{name}' '{prenom}' a bien été créé");
             }
             catch (Exception ex)
             {

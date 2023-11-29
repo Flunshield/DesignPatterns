@@ -38,6 +38,7 @@ class Program
                     break;
 
                 case "3":
+                    FabriqueLivre.CreationAuteur();
                     break;
 
                 case "4":
@@ -64,7 +65,7 @@ class Program
                     while (auteursIterator.HasNext())
                     {
                         Auteur nextAuteur = auteursIterator.Next();
-                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAuteur}, prenomAutheur: {nextAuteur.prenomAuteur}");
+                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAutheur}, prenomAutheur: {nextAuteur.prenomAutheur}");
                     }
                     Console.WriteLine("");
                     break;
