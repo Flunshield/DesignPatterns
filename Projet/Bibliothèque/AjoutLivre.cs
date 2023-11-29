@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Bibliothèque
 {
-    internal class AjoutLivre
+    internal class FabriqueLivre
     {
         public interface IFabriqueLivre
         {
             void CreationLivre();
-
+            void CreationCategorie();
         }
     
         public static void CreationLivre()
@@ -86,6 +86,15 @@ namespace Bibliothèque
 
         }
 
+        public static void CreationCategorie()
+        {
+            string nom = "";
+
+            Console.WriteLine("Veuillez rentrer le nom de la catégorie que vous voulez ajouter");
+            nom = Console.ReadLine();
+
+            Bdd.AddCategorieToBdd(nom);
+        }
 
     }
 }

@@ -30,10 +30,11 @@ class Program
             {
 
                 case "1":
-                    AjoutLivre.CreationLivre();
+                    FabriqueLivre.CreationLivre();
                     break;
 
                 case "2":
+                    FabriqueLivre.CreationCategorie();
                     break;
 
                 case "3":
