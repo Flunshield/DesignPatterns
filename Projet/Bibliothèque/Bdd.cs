@@ -140,6 +140,39 @@ namespace Bibliothèque
             return results;
         }
 
+        public static List<Auteur> ExecuteQueryCategorie(string query)
+        {
+            List<Auteur> results = new List<Auteur>();
+
+            MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
+
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                connection.Close();
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Auteur auteur = new Auteur
+                        {
+                            Id = reader.GetInt32("id"),
+                            nomAuteur = reader.GetString("nomAuteur"),
+                            prenomAuteur = reader.GetString("prenomAuteur")
+                        };
+
+                        results.Add(auteur);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return results;
+        }
+
         public static void AddBooksToBdd(string titre, int categorieId, int auteurId, string date_parution, string empruntDate, bool disponnibilite, float prixLivre)
         {
             try
