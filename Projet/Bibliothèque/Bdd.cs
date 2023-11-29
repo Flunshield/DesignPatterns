@@ -11,21 +11,6 @@ namespace Bibliothèque
     internal class Bdd
     {
 
-        public class Book : IBook
-        {
-            public int Id { get; set; }
-            public string titre { get; set; }
-            public int auteur { get; set; }
-            public int categorie { get; set; }
-            public int emprunter { get; set; }
-            public string dateParution { get; set; }
-            public string empruntDate { get; set; }
-            public bool disponnibilité { get; set; }
-            public int prixLivre { get; set; }
-            // ... implémentez d'autres propriétés de l'interface IBook
-        }
-
-
         public static void Create()
         {
             // Création de la base de données
@@ -53,9 +38,9 @@ namespace Bibliothèque
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Historique (id INT AUTO_INCREMENT PRIMARY KEY, titre VARCHAR(255), dateEmprunt VARCHAR(255), dateRetour VARCHAR(255), nomEmprunteur VARCHAR(255), prixTotal FLOAT);");
         }
 
-        public static List<IBook> GetAllBooks()
+        public static List<Book> GetAllBooks()
         {
-            List<IBook>  books = ExecuteQuery("SELECT * FROM tp.livre;");
+            List<Book>  books = ExecuteQuery("SELECT * FROM tp.livre;");
             return books;
         }
 
@@ -77,14 +62,15 @@ namespace Bibliothèque
             }
         }
 
-        public static List<IBook> ExecuteQuery(string query)
+        public static List<Book> ExecuteQuery(string query)
         {
-            List<IBook> results = new List<IBook>();
+            List<Book> results = new List<Book>();
 
             MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
 
             using (MySqlConnection connection = dbConnection.GetConnection())
             {
+                connection.Close();
                 connection.Open();
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
@@ -98,10 +84,10 @@ namespace Bibliothèque
                             titre = reader.GetString("titre"),
                             auteur = reader.GetInt32("auteurId"),
                             categorie = reader.GetInt32("categorieId"),
-                            emprunter = reader.GetInt32("emprunterId"),
+                            emprunter = reader.GetInt32("emprunteurId"),
                             dateParution = reader.GetString("dateParution"),
                             empruntDate = reader.GetString("empruntDate"),
-                            disponnibilité = reader.GetBoolean("disponnibilité"),
+                            disponnibilité = reader.GetBoolean("disponibilite"),
                             prixLivre = reader.GetInt32("prixLivre"),
                         };
 
@@ -117,17 +103,4 @@ namespace Bibliothèque
 
     }
 
-}
-public class Book : IBook
-{
-    public int Id { get; set; }
-    public string titre { get; set; }
-    public string auteur { get; set; }
-    public string categorie { get; set; }
-    public string emprunter { get; set; }
-    public string dateParution { get; set; }
-    public string empruntDate { get; set; }
-    public bool disponnibilité { get; set; }
-    public int prixLivre { get; set; }
-    // ... implémentez d'autres propriétés de l'interface IBook
 }

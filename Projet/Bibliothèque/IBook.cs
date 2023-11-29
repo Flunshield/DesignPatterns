@@ -18,4 +18,18 @@ namespace Bibliothèque
         bool disponnibilité { get; set; }
         int prixLivre { get; set; }
     }
+
+
+    public class Book : IBook
+    {
+        public int Id { get; set; }
+        public string titre { get; set; }
+        public int auteur { get; set; }
+        public int categorie { get; set; }
+        public int emprunter { get; set; }
+        public string dateParution { get; set; }
+        public string empruntDate { get; set; }
+        public bool disponnibilité { get; set; }
+        public int prixLivre { get; set; }
+    }
 }
