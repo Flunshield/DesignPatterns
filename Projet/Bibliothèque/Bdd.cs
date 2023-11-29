@@ -140,6 +140,20 @@ namespace Bibliothèque
             return results;
         }
 
+        public static void AddBooksToBdd(string titre, int categorieId, int auteurId, string date_parution, string empruntDate, bool disponnibilite, float prixLivre)
+        {
+            try
+            {
+                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
+                ExecuteQuery(insertQuery);
+
+                Console.WriteLine($"Le livre '{titre}' a bien été créé");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
+            }
+        }
     }
 
 }
