@@ -1,6 +1,7 @@
 ﻿using Bibliothèque;
 using System;
 using static Bibliothèque.BookIteratorr;
+using static Bibliothèque.ICommand;
 using static Bibliothèque.IIterator;
 
 class Program
@@ -23,6 +24,7 @@ class Program
             Console.WriteLine("Pour afficher les livres ? Taper 4");
             Console.WriteLine("Pour afficher les catégories ? Taper 5");
             Console.WriteLine("Pour afficher les auteurs ? Taper 6");
+            Console.WriteLine("Pour emprunter un livre ? Taper 7");
             Console.WriteLine("Pour sortir ? Taper 7");
             string chose = Console.ReadLine();
 
@@ -49,7 +51,7 @@ class Program
                     while (bookIterator.HasNext())
                     {
                         Book nextBook = bookIterator.Next();
-                        Console.WriteLine($"Title: {nextBook.titre}, AuthorId: {nextBook.auteur}, categorieId: {nextBook.categorie}, date de parution: {nextBook.dateParution}, Emprunter ?: {nextBook.disponnibilité}");
+                        Console.WriteLine($"Title: {nextBook.titre}, AuthorId: {nextBook.auteur}, categorieId: {nextBook.categorie}, date de parution: {nextBook.dateParution}, Emprunter ?: {nextBook.disponnibilite}");
                     }
                     Console.WriteLine("");
                     break;
@@ -81,7 +83,15 @@ class Program
                     break;
 
                 case "7":
-                    sorti = true;
+
+                    CommandInvoker invoker = new CommandInvoker();
+
+                    Console.WriteLine("Quel livre souhaitez-vous emprunter ? Saisissez l'id");
+                    string bookId = Console.ReadLine();
+                    Bibliothèque.ICommand.ICommand addCommand = new LoanBookCommand(int.Parse(bookId));
+                    invoker.SetCommand(addCommand);
+                    invoker.ExecuteCommand();
+
                     break;
                 default:
                     break;

@@ -29,7 +29,7 @@ namespace Bibliothèque
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Utilisateur (id INT AUTO_INCREMENT PRIMARY KEY, nomDeCompte VARCHAR(255), MotDePasse VARCHAR(255), pseudoUser VARCHAR(255));");
 
             // Création de la table Livre
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Livre (id INT AUTO_INCREMENT PRIMARY KEY, titre VARCHAR(255), auteurId INT, categorieId INT, emprunteurId INT, dateParution VARCHAR(255), empruntDate VARCHAR(255), disponibilite BOOLEAN, langue VARCHAR(255), prixlivre FLOAT);");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Livre (id INT AUTO_INCREMENT PRIMARY KEY, titre VARCHAR(255), auteurId INT, categorieId INT, emprunteurId INT, dateParution VARCHAR(255), empruntDate VARCHAR(255), disponibilite INT, langue VARCHAR(255), prixlivre FLOAT);");
 
             // Création de la table Panier
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Panier (id INT AUTO_INCREMENT PRIMARY KEY, clientId INT, livreId INT, prixPanier FLOAT);");
@@ -99,7 +99,7 @@ namespace Bibliothèque
                             emprunter = reader.GetInt32("emprunteurId"),
                             dateParution = reader.GetString("dateParution"),
                             empruntDate = reader.GetString("empruntDate"),
-                            disponnibilité = reader.GetBoolean("disponibilite"),
+                            disponnibilite = reader.GetInt32("disponibilite"),
                             prixLivre = reader.GetInt32("prixLivre"),
                         };
 
@@ -178,7 +178,7 @@ namespace Bibliothèque
             return results;
         }
 
-        public static void AddBooksToBdd(string titre, int categorieId, int auteurId, string date_parution, string empruntDate, bool disponnibilite, float prixLivre)
+        public static void AddBooksToBdd(string titre, int categorieId, int auteurId, string date_parution, string empruntDate, int disponnibilite, float prixLivre)
         {
             try
             {
@@ -220,6 +220,31 @@ namespace Bibliothèque
             catch (Exception ex)
             {
                 Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
+            }
+        }
+
+        public static string LoanBook(int id)
+        {
+            DateTime empruntDate = DateTime.Now;
+            try
+            {
+                string checkBook = $"SELECT * FROM livre WHERE id = {id}";
+                List<Book> book = ExecuteQueryLivre(checkBook);
+
+                if (book[0].disponnibilite == 0) {
+                    string insertQuery = $"UPDATE livre SET empruntDate = '{empruntDate}', disponibilite = '1' WHERE id = {id}";
+                    ExecuteNonQuery(insertQuery);
+                    return $"Vous avez emprunter le livre {book[0].titre}";
+                }
+                else
+                {
+                    return "Le livre est déja emprunter";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Une erreur s'est produite lors de l'emprunt du livre : {ex.Message}");
+                return ex.Message;
             }
         }
     }

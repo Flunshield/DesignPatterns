@@ -27,7 +27,7 @@ namespace Bibliothèque
             int auteurId = 0;
             string date_parution = "";
             string empruntDate = "";
-            bool disponnibilite = true;
+            int disponnibilite = 0;
             //string[] langues; 
             float prixlivre = 0;
 

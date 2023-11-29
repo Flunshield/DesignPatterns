@@ -15,7 +15,7 @@ namespace Bibliothèque
         int emprunter { get; set; }
         string dateParution { get; set; }
         string empruntDate { get; set; }
-        bool disponnibilité { get; set; }
+        int disponnibilite { get; set; }
         int prixLivre { get; set; }
     }
 
@@ -29,7 +29,7 @@ namespace Bibliothèque
         public int emprunter { get; set; }
         public string dateParution { get; set; }
         public string empruntDate { get; set; }
-        public bool disponnibilité { get; set; }
+        public int disponnibilite { get; set; }
         public int prixLivre { get; set; }
     }
 }
