@@ -8,10 +8,11 @@ namespace Bibliothèque
 {
     internal interface IBook
     {
+        int Id { get; }
         string titre { get; set; }
-        string auteur { get; set; }
-        string categorie { get; set; }
-        string emprunter { get; set; }
+        int auteur { get; set; }
+        int categorie { get; set; }
+        int emprunter { get; set; }
         string dateParution { get; set; }
         string empruntDate { get; set; }
         bool disponnibilité { get; set; }
