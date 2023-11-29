@@ -9,15 +9,15 @@ namespace Bibliothèque
     internal interface IAuteur
     {
         int Id { get; }
-        string nomAutheur { get; set; }
-        string prenomAutheur { get; set; }
+        string nomAuteur { get; set; }
+        string prenomAuteur { get; set; }
     }
 
 
     public class Auteur : IAuteur
     {
         public int Id { get; set; }
-        public string nomAutheur { get; set; }
-        public string prenomAutheur { get; set; }
+        public string nomAuteur { get; set; }
+        public string prenomAuteur { get; set; }
     }
 }

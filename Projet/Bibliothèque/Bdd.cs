@@ -20,7 +20,7 @@ namespace Bibliothèque
             ExecuteNonQuery("USE tp;");
 
             // Création de la table Autheur
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAutheur VARCHAR(255), prenomAutheur VARCHAR(255));");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAuteur VARCHAR(255), prenomAuteur VARCHAR(255));");
 
             // Création de la table Category
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Category (id INT AUTO_INCREMENT PRIMARY KEY, nomCategory VARCHAR(255));");
@@ -126,8 +126,8 @@ namespace Bibliothèque
                         Auteur auteur = new Auteur
                         {
                             Id = reader.GetInt32("id"),
-                            nomAutheur = reader.GetString("nomAutheur"),
-                            prenomAutheur = reader.GetString("prenomAutheur")
+                            nomAuteur = reader.GetString("nomAuteur"),
+                            prenomAuteur = reader.GetString("prenomAuteur")
                         };
 
                         results.Add(auteur);
@@ -144,8 +144,8 @@ namespace Bibliothèque
         {
             try
             {
-                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
-                ExecuteQuery(insertQuery);
+                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, emprunteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '0', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
+                ExecuteNonQuery(insertQuery);
 
                 Console.WriteLine($"Le livre '{titre}' a bien été créé");
             }

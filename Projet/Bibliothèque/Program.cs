@@ -63,7 +63,7 @@ class Program
                     while (auteursIterator.HasNext())
                     {
                         Auteur nextAuteur = auteursIterator.Next();
-                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAutheur}, prenomAutheur: {nextAuteur.prenomAutheur}");
+                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAuteur}, prenomAutheur: {nextAuteur.prenomAuteur}");
                     }
                     Console.WriteLine("");
                     break;
