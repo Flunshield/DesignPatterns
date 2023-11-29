@@ -20,10 +20,10 @@ namespace Bibliothèque
             ExecuteNonQuery("USE tp;");
 
             // Création de la table Autheur
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAutheur VARCHAR(255), prenomAutheur VARCHAR(255));");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Auteur (id INT AUTO_INCREMENT PRIMARY KEY, nomAuteur VARCHAR(255), prenomAuteur VARCHAR(255));");
 
             // Création de la table Category
-            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Category (id INT AUTO_INCREMENT PRIMARY KEY, nomCategory VARCHAR(255));");
+            ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Categorie (id INT AUTO_INCREMENT PRIMARY KEY, nomCategorie VARCHAR(255));");
 
             // Création de la table Utilisateur
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Utilisateur (id INT AUTO_INCREMENT PRIMARY KEY, nomDeCompte VARCHAR(255), MotDePasse VARCHAR(255), pseudoUser VARCHAR(255));");
@@ -46,8 +46,14 @@ namespace Bibliothèque
 
         public static List<Auteur> GetAllAuteurs()
         {
-            List<Auteur> auteurs = ExecuteQueryAuteur("SELECT * FROM tp.auteur;");
+            List<Auteur> auteurs = ExecuteQueryAuteur("SELECT * FROM tp.Auteur;");
             return auteurs;
+        }
+        
+        public static List<Categorie> GetAllCategorie()
+        {
+            List<Categorie> Categorie = ExecuteQueryCategorie("SELECT * FROM tp.Categorie;");
+            return Categorie;
         }
 
         private static void ExecuteNonQuery(string query)
@@ -126,39 +132,6 @@ namespace Bibliothèque
                         Auteur auteur = new Auteur
                         {
                             Id = reader.GetInt32("id"),
-                            nomAutheur = reader.GetString("nomAutheur"),
-                            prenomAutheur = reader.GetString("prenomAutheur")
-                        };
-
-                        results.Add(auteur);
-                    }
-                }
-
-                connection.Close();
-            }
-
-            return results;
-        }
-
-        public static List<Auteur> ExecuteQueryCategorie(string query)
-        {
-            List<Auteur> results = new List<Auteur>();
-
-            MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
-
-            using (MySqlConnection connection = dbConnection.GetConnection())
-            {
-                connection.Close();
-                connection.Open();
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Auteur auteur = new Auteur
-                        {
-                            Id = reader.GetInt32("id"),
                             nomAuteur = reader.GetString("nomAuteur"),
                             prenomAuteur = reader.GetString("prenomAuteur")
                         };
@@ -173,11 +146,43 @@ namespace Bibliothèque
             return results;
         }
 
+        public static List<Categorie> ExecuteQueryCategorie(string query)
+        {
+            List<Categorie> results = new List<Categorie>();
+
+            MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
+
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                connection.Close();
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Categorie categorie = new Categorie
+                        {
+                            Id = reader.GetInt32("id"),
+                            nomCategorie = reader.GetString("nomCategorie"),
+                        };
+
+                        results.Add(categorie);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return results;
+        }
+
         public static void AddBooksToBdd(string titre, int categorieId, int auteurId, string date_parution, string empruntDate, bool disponnibilite, float prixLivre)
         {
             try
             {
-                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
+                string insertQuery = $"INSERT INTO Livre (titre, categorieId, auteurId, emprunteurId, dateParution, empruntDate, disponibilite, prixLivre) VALUES ('{titre}', '{categorieId}', '{auteurId}', '0', '{date_parution}', '{empruntDate}', '{disponnibilite}', '{prixLivre}')";
                 ExecuteNonQuery(insertQuery);
 
                 Console.WriteLine($"Le livre '{titre}' a bien été créé");
@@ -192,7 +197,7 @@ namespace Bibliothèque
         {
             try
             {
-                string insertQuery = $"INSERT INTO Category (nomCategory) VALUES ('{name}')";
+                string insertQuery = $"INSERT INTO Categorie (nomCategorie) VALUES ('{name}')";
                 ExecuteNonQuery(insertQuery);
 
                 Console.WriteLine($"La catégorie '{name}' a bien été créé");

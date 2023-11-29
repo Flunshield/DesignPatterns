@@ -55,6 +55,16 @@ class Program
                     break;
 
                 case "5":
+                    List<Categorie> categorieList = Bdd.GetAllCategorie();
+                    IIterator<Categorie> categorieIterator = new Iterator<Categorie>(categorieList);
+
+                    Console.WriteLine("");
+                    while (categorieIterator.HasNext())
+                    {
+                        Categorie nextCategorie = categorieIterator.Next();
+                        Console.WriteLine($"nomCategorie: {nextCategorie.nomCategorie}");
+                    }
+                    Console.WriteLine("");
                     break;
 
                 case "6":
@@ -65,10 +75,9 @@ class Program
                     while (auteursIterator.HasNext())
                     {
                         Auteur nextAuteur = auteursIterator.Next();
-                        Console.WriteLine($"nomAutheur: {nextAuteur.nomAutheur}, prenomAutheur: {nextAuteur.prenomAutheur}");
+                        Console.WriteLine($"nomAuteur: {nextAuteur.nomAuteur}, prenomAuteur: {nextAuteur.prenomAuteur}");
                     }
                     Console.WriteLine("");
-                    break;
                     break;
 
                 case "7":

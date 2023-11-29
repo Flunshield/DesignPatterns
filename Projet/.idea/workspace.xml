@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5d4c1b8-c84d-4352-aa6f-b6e9672bcaf4" name="Changes" comment="" />
+    <list default="true" id="b5d4c1b8-c84d-4352-aa6f-b6e9672bcaf4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/AjoutLivre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/FabriqueLivre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/Bdd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/Bdd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,14 +21,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,6 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701269075471</updated>
       <workItem from="1701269077576" duration="115000" />
+      <workItem from="1701269514426" duration="15000" />
     </task>
     <servers />
   </component>

@@ -9,13 +9,13 @@ namespace Bibliothèque
     internal interface ICategorie
     {
         int Id { get; }
-        string nomCategory { get; set; }
+        string nomCategorie { get; set; }
     }
 
 
     public class Categorie : ICategorie
     {
         public int Id { get; set; }
-        public string nomCategory { get; set; }
+        public string nomCategorie { get; set; }
     }
 }
