@@ -30,6 +30,7 @@ class Program
             {
 
                 case "1":
+                    AjoutLivre.CreationLivre();
                     break;
 
                 case "2":
