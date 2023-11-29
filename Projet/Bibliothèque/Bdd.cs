@@ -154,6 +154,21 @@ namespace Bibliothèque
                 Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
             }
         }
+
+        public static void AddCategorieToBdd(string name)
+        {
+            try
+            {
+                string insertQuery = $"INSERT INTO Category (nomCategory) VALUES ('{name}')";
+                ExecuteNonQuery(insertQuery);
+
+                Console.WriteLine($"La catégorie '{name}' a bien été créé");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
+            }
+        }
     }
 
 }
