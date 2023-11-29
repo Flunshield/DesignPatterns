@@ -10,7 +10,7 @@ namespace Bibliothèque
     {
         public interface ICommand
         {
-            string Execute();
+            void Execute();
         }
 
         public class LoanBookCommand : ICommand
@@ -22,9 +22,9 @@ namespace Bibliothèque
                 this.IdBook = IdBook;
             }
 
-            public string Execute()
+            public void Execute()
             {
-                return Bdd.LoanBook(IdBook);
+                Bdd.LoanBook(IdBook);
             }
         }
 

@@ -223,7 +223,7 @@ namespace Bibliothèque
             }
         }
 
-        public static string LoanBook(int id)
+        public static void LoanBook(int id)
         {
             DateTime empruntDate = DateTime.Now;
             try
@@ -234,17 +234,18 @@ namespace Bibliothèque
                 if (book[0].disponnibilite == 0) {
                     string insertQuery = $"UPDATE livre SET empruntDate = '{empruntDate}', disponibilite = '1' WHERE id = {id}";
                     ExecuteNonQuery(insertQuery);
-                    return $"Vous avez emprunter le livre {book[0].titre}";
+                    Console.WriteLine($"Vous avez emprunter le livre {book[0].titre}");
+                    Console.WriteLine("");
                 }
                 else
                 {
-                    return "Le livre est déja emprunter";
+                    Console.WriteLine("Le livre est déja emprunter");
+                    Console.WriteLine("");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Une erreur s'est produite lors de l'emprunt du livre : {ex.Message}");
-                return ex.Message;
             }
         }
     }

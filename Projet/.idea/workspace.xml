@@ -2,11 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d4c1b8-c84d-4352-aa6f-b6e9672bcaf4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Bibliothèque/AjoutLivre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/FabriqueLivre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/DesignPatterns/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/DesignPatterns/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/AbstractFactory.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/AbstractFactory.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/AbstractFactory.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/AbstractFactory.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/Debug/net6.0/AbstractFactory.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bibliothèque/Bdd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/Bdd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bibliothèque/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/FabriqueLivre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/FabriqueLivre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/bin/Debug/net6.0/Bibliothèque.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Bibliothèque.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Bibliothèque.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Bibliothèque.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Bibliothèque.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/Bibliothèque.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/ref/Bibliothèque.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/ref/Bibliothèque.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/refint/Bibliothèque.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/Debug/net6.0/refint/Bibliothèque.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bibliothèque/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Bibliothèque/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/Builder.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/Builder.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/Builder.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/Builder.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/Debug/net6.0/Builder.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/Composite.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/Composite.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/Composite.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/Composite.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/Debug/net6.0/Composite.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Composite/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Composite/obj/project.nuget.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +77,7 @@
       <updated>1701269075471</updated>
       <workItem from="1701269077576" duration="115000" />
       <workItem from="1701269514426" duration="15000" />
+      <workItem from="1701273312745" duration="21000" />
     </task>
     <servers />
   </component>
