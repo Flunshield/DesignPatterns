@@ -16,9 +16,9 @@ namespace Bibliothèque
             string printGetAll();
         }
 
-        public class Books
+        public class Books: IGetAll
         {
-            public string getAllBooks()
+            public string printGetAll()
             {
                 List<Book> bookList = Bdd.GetAllBooks();
                 IIterator<Book> bookIterator = new Iterator<Book>(bookList);
@@ -62,9 +62,9 @@ namespace Bibliothèque
             }
         }
 
-        public class Categories
+        public class Categories: IGetAll
         {
-            public string getAllCategories()
+            public string printGetAll()
             {
                 List<Categorie> categorieList = Bdd.GetAllCategorie();
                 IIterator<Categorie> categorieIterator = new Iterator<Categorie>(categorieList);
@@ -81,9 +81,9 @@ namespace Bibliothèque
             }
         }
 
-        public class Auteurs
+        public class Auteurs: IGetAll
         {
-            public string getAllAuteurs()
+            public string printGetAll()
             {
                 List<Auteur> auteurList = Bdd.GetAllAuteurs();
                 IIterator<Auteur> auteursIterator = new Iterator<Auteur>(auteurList);

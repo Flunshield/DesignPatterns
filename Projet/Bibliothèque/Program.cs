@@ -49,17 +49,17 @@ class Program
 
                 case "4":
                     GetAll.Books books = new GetAll.Books();
-                    books.getAllBooks();
+                    books.printGetAll();
                     break;
 
                 case "5":
                     GetAll.Categories categories = new GetAll.Categories();
-                    categories.getAllCategories();
+                    categories.printGetAll();
                     break;
 
                 case "6":
                     GetAll.Auteurs auteurs = new GetAll.Auteurs();
-                    auteurs.getAllAuteurs();
+                    auteurs.printGetAll();
                     break;
 
                 case "7":
