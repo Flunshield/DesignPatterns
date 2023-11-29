@@ -219,7 +219,7 @@ namespace Bibliothèque
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Une erreur s'est produite lors de l'ajout du livre : {ex.Message}");
+                Console.WriteLine($"Une erreur s'est produite lors de l'ajout de l'auteur : {ex.Message}");
             }
         }
 

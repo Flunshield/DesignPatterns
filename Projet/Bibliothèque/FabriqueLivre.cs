@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static Bibliothèque.BookIteratorr;
+using static Bibliothèque.IIterator;
 
 namespace Bibliothèque
 {
@@ -34,12 +36,20 @@ namespace Bibliothèque
 
             Console.WriteLine("Veuillez rentrez le nom de votre livre");
             titre = Console.ReadLine();
-            Console.WriteLine("Veuillez selectionner la catégorie de votre livre");
-            Console.WriteLine(
-                "- Fantaisie (1)" +
-                "- Science Fiction (2)" +
-                "- Policier (3)" +
-                "- Comique (4)");
+            Console.WriteLine("Veuillez selectionner la catégorie de votre livre dans les catégories suivante");
+
+            List<Categorie> categorieList = Bdd.GetAllCategorie();
+            IIterator<Categorie> categorieIterator = new Iterator<Categorie>(categorieList);
+
+            int indexCategorie = 1;
+
+            while (categorieIterator.HasNext())
+            {
+                Categorie nextCategorie = categorieIterator.Next();
+                Console.WriteLine($"{indexCategorie}: {nextCategorie.nomCategorie}");
+                indexCategorie++;
+            }
+
 
             if (int.TryParse(Console.ReadLine(), out categorieNumber))
             {
@@ -51,6 +61,20 @@ namespace Bibliothèque
             }
 
             Console.WriteLine("Veuillez renseignez l'id de l'auteur");
+
+            List<Auteur> auteurList = Bdd.GetAllAuteurs();
+            IIterator<Auteur> auteurIterator = new Iterator<Auteur>(auteurList);
+
+            int indexAuteurList = 1;
+
+            while (auteurIterator.HasNext())
+            {
+                Auteur nextAuteur = auteurIterator.Next();
+                Console.WriteLine($"{indexAuteurList}: {nextAuteur.nomAuteur} {nextAuteur.prenomAuteur}");
+                indexAuteurList++;
+            }
+
+
             if (int.TryParse(Console.ReadLine(), out auteurNumber))
             {
                 auteurId = auteurNumber;
