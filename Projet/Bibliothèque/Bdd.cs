@@ -36,6 +36,12 @@ namespace Bibliothèque
             ExecuteNonQuery("CREATE TABLE IF NOT EXISTS Historique (id INT PRIMARY KEY, titre VARCHAR(255), dateEmprunt VARCHAR(255), dateRetour VARCHAR(255), nomEmprunteur VARCHAR(255), prixTotal FLOAT);");
         }
 
+        public static List<IBook> GetAllBooks()
+        {
+            List<IBook> books = new List<IBook>();
+            return ExecuteNonQuery("SELECT * FROM tp.livre;");
+        }
+
         private static void ExecuteNonQuery(string query)
         {
             MySqlConnectionSingleton dbConnection = MySqlConnectionSingleton.Instance;
