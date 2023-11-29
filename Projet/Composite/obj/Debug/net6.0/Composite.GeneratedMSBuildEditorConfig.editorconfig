@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Composite
-build_property.ProjectDir = C:\Users\jbert\OneDrive\Documents\Ecole\ISITECH\ISITECH\ESI4\Cours\DesignPatterns\Projet\Composite\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\lecas\Desktop\Isitech\ESI4\Design pattern C#\Tp\DesignPatterns\Projet\Composite\
