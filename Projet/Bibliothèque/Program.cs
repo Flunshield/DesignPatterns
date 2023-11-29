@@ -37,11 +37,13 @@ class Program
                     break;
 
                 case "2":
-                    //FabriqueLivre.CreationCategorie();
+                    FabriqueLivre.Categories categorieInstance = new FabriqueLivre.Categories();
+                    categorieInstance.Creation();
                     break;
 
                 case "3":
-                    //FabriqueLivre.CreationAuteur();
+                    FabriqueLivre.Auteurs auteurInstance = new FabriqueLivre.Auteurs();
+                    auteurInstance.Creation();
                     break;
 
                 case "4":

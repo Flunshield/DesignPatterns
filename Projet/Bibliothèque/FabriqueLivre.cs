@@ -1,10 +1,5 @@
-﻿using Org.BouncyCastle.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using static Bibliothèque.BookIteratorr;
 using static Bibliothèque.IIterator;
 
@@ -15,9 +10,6 @@ namespace Bibliothèque
         public interface IFabriqueLivre
         {
             string Creation();
-            //void CreationCategorie();
-
-            //void CreationAuteur();
         }
 
         public class Livre : IFabriqueLivre
@@ -32,13 +24,11 @@ namespace Bibliothèque
                 string date_parution = "";
                 string empruntDate = "";
                 int disponnibilite = 0;
-                //string[] langues; 
                 int prixlivre = 0;
-
 
                 Console.WriteLine("Veuillez rentrez le nom de votre livre");
                 titre = Console.ReadLine();
-                Console.WriteLine("Veuillez selectionner la catégorie de votre livre dans les catégories suivante");
+                Console.WriteLine("Veuillez sélectionner la catégorie de votre livre dans les catégories suivantes");
 
                 List<Categorie> categorieList = Bdd.GetAllCategorie();
                 IIterator<Categorie> categorieIterator = new Iterator<Categorie>(categorieList);
@@ -51,7 +41,6 @@ namespace Bibliothèque
                     Console.WriteLine($"{indexCategorie}: {nextCategorie.nomCategorie}");
                     indexCategorie++;
                 }
-
 
                 if (int.TryParse(Console.ReadLine(), out categorieNumber))
                 {
@@ -76,7 +65,6 @@ namespace Bibliothèque
                     indexAuteurList++;
                 }
 
-
                 if (int.TryParse(Console.ReadLine(), out auteurNumber))
                 {
                     auteurId = auteurNumber;
@@ -85,12 +73,9 @@ namespace Bibliothèque
                 {
                     Console.WriteLine("Veuillez entrer un numéro d'auteur valide.");
                 }
+
                 Console.WriteLine("Veuillez renseignez la date de parution");
                 date_parution = Console.ReadLine();
-
-                //Console.WriteLine("Veuillez entrer les langues du livre (séparées par des virgules)");
-                //string languesInput = Console.ReadLine();
-                //langues = languesInput.Split(',');
 
                 Console.WriteLine("Veuillez renseigner le prix du livre");
                 if (int.TryParse(Console.ReadLine(), out prixlivre) && prixlivre > 0)
@@ -112,34 +97,47 @@ namespace Bibliothèque
                     Console.WriteLine("Veuillez renseigner un nombre supérieur à 0");
                     return "";
                 }
-
-
-
             }
         }
-        //public static void CreationCategorie()
-        //{
-        //    string nom = "";
 
-        //    Console.WriteLine("Veuillez rentrer le nom de la catégorie que vous voulez ajouter");
-        //    nom = Console.ReadLine();
+        public class Categories : IFabriqueLivre
+        {
+            public string Creation()
+            {
+                string nom = "";
 
-        //    Bdd.AddCategorieToBdd(nom);
-        //}
+                Console.WriteLine("Veuillez rentrer le nom de la catégorie que vous voulez ajouter");
+                nom = Console.ReadLine();
 
-        //public static void CreationAuteur()
-        //{
-        //    string nom = "";
-        //    string prenom = "";
+                ICategorie categorie = new Categorie();
+                categorie.nomCategorie = nom;
 
-        //    Console.WriteLine("Veuillez rentrer le nom de l'auteur que vous voulez ajouter");
-        //    nom = Console.ReadLine();
+                Bdd.AddCategorieToBdd(categorie.nomCategorie);
+                return "";
+            }
+        }
 
-        //    Console.WriteLine("Veuillez rentrer le prénom de l'auteur que vous voulez ajouter");
-        //    prenom = Console.ReadLine();
+        public class Auteurs: IFabriqueLivre
+        {
+            public string Creation()
+            {
 
-        //    Bdd.AddAuteurToBdd(nom, prenom);
-        //}
+                string nom = "";
+                string prenom = "";
 
+                Console.WriteLine("Veuillez rentrer le nom de l'auteur que vous voulez ajouter");
+                nom = Console.ReadLine();
+
+                Console.WriteLine("Veuillez rentrer le prénom de l'auteur que vous voulez ajouter");
+                prenom = Console.ReadLine();
+
+                IAuteur auteur = new Auteur();
+                auteur.nomAuteur = nom;
+                auteur.prenomAuteur = prenom;
+
+                Bdd.AddAuteurToBdd(auteur.nomAuteur, auteur.prenomAuteur);
+                return "";
+            }
+        }
     }
 }
