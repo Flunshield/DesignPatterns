@@ -15,9 +15,6 @@ class Program
         //Création de la console
         bool sorti = false;
 
-        // Init du tableau pour les getAll pour le limiter à un certains nb d'éléments
-        int nbGetAll = 15;
-
         while (sorti == false)
         {
 
