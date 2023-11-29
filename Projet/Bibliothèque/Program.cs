@@ -1,5 +1,7 @@
 ﻿using Bibliothèque;
 using System;
+using static Bibliothèque.BookIteratorr;
+using static Bibliothèque.IIterator;
 
 class Program
 {
@@ -37,7 +39,16 @@ class Program
                     break;
 
                 case "4":
+                    List<Book> bookList = Bdd.GetAllBooks();
+                    IIterator <Book> bookIterator = new BookIterator(bookList);
 
+                    Console.WriteLine("");
+                    while (bookIterator.HasNext())
+                    {
+                        Book nextBook = bookIterator.Next();
+                        Console.WriteLine($"Title: {nextBook.titre}, AuthorId: {nextBook.auteur}, categorieId: {nextBook.categorie}, date de parution: {nextBook.dateParution}, Emprunter ?: {nextBook.disponnibilité}");
+                    }
+                    Console.WriteLine("");
                     break;
 
                 case "5":
