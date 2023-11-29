@@ -14,6 +14,8 @@ namespace Bibliothèque
         {
             void CreationLivre();
             void CreationCategorie();
+
+            void CreationAuteur();
         }
     
         public static void CreationLivre()
@@ -94,6 +96,20 @@ namespace Bibliothèque
             nom = Console.ReadLine();
 
             Bdd.AddCategorieToBdd(nom);
+        }
+
+        public static void CreationAuteur()
+        {
+            string nom = "";
+            string prenom = "";
+
+            Console.WriteLine("Veuillez rentrer le nom de l'auteur que vous voulez ajouter");
+            nom = Console.ReadLine();
+
+            Console.WriteLine("Veuillez rentrer le prénom de l'auteur que vous voulez ajouter");
+            prenom = Console.ReadLine();
+
+            Bdd.AddAuteurToBdd(nom, prenom);
         }
 
     }
