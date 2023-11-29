@@ -174,7 +174,7 @@ Sépare l'implémentation de la représentation.
 
 ### le partens Decorator
 
-```java 
+```java spring boot
 
 // J'ai créé un décorateur de modification de chaîne de caractères pour formater un texte spécifique en gras. Pour cela, plusieurs fichiers ont été créés (voir le code source) pour permettre l'utilisation du décorateur "BoldDecorator".
 
