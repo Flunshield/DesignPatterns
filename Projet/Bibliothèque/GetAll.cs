@@ -28,6 +28,9 @@ namespace Bibliothèque
                 {
                     Book nextBook = bookIterator.Next();
                     {
+
+                        Console.WriteLine("");
+                        Console.WriteLine($"Disponnible ? 0 : Oui | 1 : Non ==> {nextBook.disponnibilite}");
                         Console.WriteLine($"╔═════════════════════════════════════════╗");
                         Console.WriteLine($"║            {nextBook.titre}             ║");
                         Console.WriteLine($"║                                         ║");
@@ -54,7 +57,6 @@ namespace Bibliothèque
                         Console.WriteLine($"║                                         ║");
                         Console.WriteLine($"╚═════════════════════════════════════════╝");
                     }
-                    Console.WriteLine($"Emprunter ?: {nextBook.disponnibilite}");
                 }
                 Console.WriteLine("");
 
