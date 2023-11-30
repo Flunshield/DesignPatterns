@@ -12,6 +12,6 @@ Le projet a été réalisé par Rémi LECAS et BERTRAND Julien.
 # Lancement du projet
 Pour lancer le projet, vous devrez configurer une base de données MySQL, par exemple, en utilisant XAMPP.
 
-Une fois que tout est en place, il sera nécessaire de modifier la chaîne de caractères à la ligne 8 du fichier MySqlConnectionSingleton.css pour permettre la communication avec notre programme.
+Une fois que tout est en place, il sera nécessaire de modifier la chaîne de caractères à la ligne 8 du fichier MySqlConnectionSingleton.cs pour permettre la communication avec notre programme.
 
 Enjoy.
