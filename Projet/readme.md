@@ -7,7 +7,7 @@ Le projet a été réalisé par Rémi LECAS et BERTRAND Julien.
 - **Command** : Mis en place par BERTRAND Julien pour l'emprunt d'un livre.
 - **Factory** : Mis en place par Rémi Lecas pour la création de livre, catégorie, auteur et pour la récupération compléte des livres, catégories, auteurs. 
 
-## Les schéma des différents designs patterns utilisés sont dans le dossier **Design Pattern C#**
+## Les schéma des différents diagramme UML utilisés sont dans le dossier *Projet/Bibliothèque/DiagrammUML*
 
 # Lancement du projet
 Pour lancer le projet, vous devrez configurer une base de données MySQL, par exemple, en utilisant XAMPP.
