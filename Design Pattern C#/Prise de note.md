@@ -199,3 +199,12 @@ public class HelloController {
 }
 
 ```
+
+## Patterns comportementaux
+Les patrons comportementaux s’occupent des algorithmes et de la répartition des responsabilités entre les objets.
+
+### Chaîne de responsabilité
+**Chaîne de responsabilité** est un patron de conception comportemental qui permet de faire circuler des demandes dans une chaîne de handlers. Lorsqu’un handler reçoit une demande, il décide de la traiter ou de l’envoyer au handler suivant de la chaîne.
+
+### Iterator
+**Itérateur** est un patron de conception comportemental qui permet de parcourir les éléments d’une collection sans révéler sa représentation interne (liste, pile, arbre, etc.).
